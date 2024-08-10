@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: semikallelbackupcicd 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: semikallelbackupcicd
+  template:
+    metadata:
+      labels:
+        app: semikallelbackupcicd 
+    spec:
+      containers:
+        - name: semikallelbackupcicd 
+          image: uniqueacrregistrybackup.azurecr.io/semikallelbackupcicd
+          ports:
+          - containerPort: 80
