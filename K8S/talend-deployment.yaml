@@ -13,7 +13,7 @@ spec:
         spec:
           containers:
             - name: talend
-              image: uniqueacrregistrybackup.azurecr.io/service:latest
+              image: uniqueacrregistrybackup.azurecr.io/backup_image:latest
               env:
                 - name: DB_HOST
                   value: "mysql"
