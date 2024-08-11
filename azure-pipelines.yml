@@ -71,9 +71,7 @@ stages:
               action: deploy
               manifests: |
                 $(Pipeline.Workspace)/manifests/mysql-backup-deployment.yaml
-                $(Pipeline.Workspace)/manifests/mysql-backup-pv.yaml
                 $(Pipeline.Workspace)/manifests/mysql-deployment.yaml
-                $(Pipeline.Workspace)/manifests/mysql-pv.yaml
                 $(Pipeline.Workspace)/manifests/talend-deployment.yaml
 
               imagePullSecrets: |
