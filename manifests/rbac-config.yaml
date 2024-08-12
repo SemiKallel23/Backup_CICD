@@ -13,7 +13,7 @@ metadata:
   name: persistent-volume-access-binding
 subjects:
 - kind: ServiceAccount
-  name: azdev-sa-90132d
+  name: default
   namespace: default
 roleRef:
   kind: ClusterRole
