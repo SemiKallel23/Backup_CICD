@@ -12,7 +12,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'd4b3558b-9b36-4f7e-81c9-caf83ab2c22d'
-  imageRepository: 'semikallelbackupcicd'
+  imageRepository: 'j_backup_image_cicd'
   containerRegistry: 'uniqueacrregistrybackup.azurecr.io'
   dockerfilePath: '**/dockerfile'
   tag: '$(Build.BuildId)'
@@ -70,8 +70,6 @@ stages:
             inputs:
               action: deploy
               manifests: |
-                $(Pipeline.Workspace)/manifests/mysql-backup-deployment.yaml
-                $(Pipeline.Workspace)/manifests/mysql-deployment.yaml
                 $(Pipeline.Workspace)/manifests/talend-deployment.yaml
 
               imagePullSecrets: |
