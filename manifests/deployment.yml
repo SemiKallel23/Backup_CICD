@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jbackupimage 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jbackupimage
+  template:
+    metadata:
+      labels:
+        app: jbackupimage 
+    spec:
+      containers:
+        - name: jbackupimage 
+          image: uniqueacrregistrybackup.azurecr.io/jbackupimage
+          ports:
+          - containerPort: 80
